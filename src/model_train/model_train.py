@@ -39,10 +39,10 @@ def main():
     test_df = pd.read_csv(select_first_file(args.test_data))
 
     # Split the data into features(X) and target(y) 
-    y_train = train_df['Price']
-    X_train = train_df.drop(columns=['Price'])
-    y_test = test_df['Price']
-    X_test = test_df.drop(columns=['Price'])
+    y_train = train_df['price']
+    X_train = train_df.drop(columns=['price'])
+    y_test = test_df['price']
+    X_test = test_df.drop(columns=['price'])
 
     # Initialize and train a RandomForest Regressor
     model = RandomForestRegressor(n_estimators=args.n_estimators, max_depth=args.max_depth, random_state=42)
