@@ -122,10 +122,12 @@ def get_ml_client():
     except Exception:
         credential = InteractiveBrowserCredential()
 
-    ml_client = MLClient.from_config(
-        credential=credential,
-        path="workspace.json",  
-    )
+    # ml_client = MLClient.from_config(
+    #     credential=credential,
+    #     path="workspace.json",  
+    # )
+    ml_client = MLClient.from_config(credential=credential)
+
     return ml_client
 
 
